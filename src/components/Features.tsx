@@ -19,69 +19,69 @@ const features = [
     title: 'Lightning Fast',
     description: 'Sub-millisecond response times with our optimized routing engine and global edge network.',
     color: 'text-yellow-500',
-    bgColor: 'bg-yellow-50'
+    bgColor: 'bg-yellow-50 dark:bg-yellow-900/20'
   },
   {
     icon: Shield,
     title: 'Enterprise Security',
     description: 'Bank-grade encryption, SOC 2 compliance, and advanced threat protection for your AI workloads.',
     color: 'text-green-500',
-    bgColor: 'bg-green-50'
+    bgColor: 'bg-green-50 dark:bg-green-900/20'
   },
   {
     icon: Globe,
     title: 'Global Scale',
     description: 'Deploy across 200+ edge locations worldwide with automatic failover and load balancing.',
     color: 'text-blue-500',
-    bgColor: 'bg-blue-50'
+    bgColor: 'bg-blue-50 dark:bg-blue-900/20'
   },
   {
     icon: BarChart3,
     title: 'Real-time Analytics',
     description: 'Comprehensive monitoring, logging, and analytics to optimize your AI model performance.',
     color: 'text-purple-500',
-    bgColor: 'bg-purple-50'
+    bgColor: 'bg-purple-50 dark:bg-purple-900/20'
   },
   {
     icon: Code,
     title: 'Developer First',
     description: 'RESTful APIs, SDKs for all major languages, and extensive documentation to get you started.',
     color: 'text-indigo-500',
-    bgColor: 'bg-indigo-50'
+    bgColor: 'bg-indigo-50 dark:bg-indigo-900/20'
   },
   {
     icon: Lock,
     title: 'Access Control',
     description: 'Fine-grained permissions, API key management, and role-based access control.',
     color: 'text-red-500',
-    bgColor: 'bg-red-50'
+    bgColor: 'bg-red-50 dark:bg-red-900/20'
   },
   {
     icon: Cpu,
     title: 'Smart Routing',
     description: 'Intelligent request routing based on model availability, cost, and performance metrics.',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-50'
+    bgColor: 'bg-orange-50 dark:bg-orange-900/20'
   },
   {
     icon: Database,
     title: 'Model Management',
     description: 'Version control, A/B testing, and seamless model deployment and rollback capabilities.',
     color: 'text-teal-500',
-    bgColor: 'bg-teal-50'
+    bgColor: 'bg-teal-50 dark:bg-teal-900/20'
   },
   {
     icon: Cloud,
     title: 'Multi-Cloud',
     description: 'Deploy across AWS, Azure, GCP, and other cloud providers with unified management.',
     color: 'text-cyan-500',
-    bgColor: 'bg-cyan-50'
+    bgColor: 'bg-cyan-50 dark:bg-cyan-900/20'
   }
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-20 bg-gray-50 dark:bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -90,7 +90,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
           >
             Powerful Features for{' '}
             <span className="gradient-text">Modern AI</span>
@@ -100,7 +100,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
             Everything you need to build, deploy, and scale AI-powered applications 
             with confidence and reliability.
@@ -116,15 +116,15 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group p-8 rounded-2xl bg-white border border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group p-8 rounded-2xl bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className={`w-6 h-6 ${feature.color}`} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

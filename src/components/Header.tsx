@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Globe, ArrowRight } from 'lucide-react';
+import { Menu, X, Zap, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-              <Globe className="w-5 h-5 text-white" />
+              <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold gradient-text">AI Gateway</span>
           </div>
@@ -32,7 +32,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
@@ -49,7 +49,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-gray-700 dark:text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -64,14 +64,14 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-effect border-t border-white/20"
+            className="md:hidden glass-effect border-t border-gray-200 dark:border-gray-700"
           >
             <div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
+                  className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

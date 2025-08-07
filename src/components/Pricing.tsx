@@ -56,7 +56,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <section id="pricing" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -65,7 +65,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
           >
             Simple, Transparent{' '}
             <span className="gradient-text">Pricing</span>
@@ -75,7 +75,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
             Choose the perfect plan for your needs. Start free and scale as you grow.
           </motion.p>
@@ -90,10 +90,10 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative p-8 rounded-2xl bg-white border-2 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${
+              className={`relative p-8 rounded-2xl bg-white dark:bg-slate-800 border-2 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${
                 plan.popular 
-                  ? 'border-purple-500 shadow-xl' 
-                  : 'border-gray-200 hover:border-purple-200'
+                  ? 'border-indigo-500 shadow-xl' 
+                  : 'border-gray-200 dark:border-slate-700 hover:border-indigo-200 dark:hover:border-indigo-700'
               }`}
             >
               {plan.popular && (
@@ -105,25 +105,25 @@ export default function Pricing() {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {plan.name}
                 </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-gray-900 dark:text-white">
                     {plan.price}
                   </span>
                   {plan.period && (
-                    <span className="text-gray-600">{plan.period}</span>
+                    <span className="text-gray-600 dark:text-gray-400">{plan.period}</span>
                   )}
                 </div>
-                <p className="text-gray-600">{plan.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">{plan.description}</p>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
                     <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -132,7 +132,7 @@ export default function Pricing() {
                 className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center space-x-2 ${
                   plan.popular
                     ? 'gradient-bg text-white hover:opacity-90 shadow-lg hover:shadow-xl'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600'
                 }`}
               >
                 <span>{plan.cta}</span>
@@ -150,9 +150,9 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-400">
             All plans include 14-day free trial. No credit card required.{' '}
-            <a href="#" className="text-purple-600 hover:text-purple-700 font-medium">
+            <a href="#" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium">
               View detailed pricing →
             </a>
           </p>
